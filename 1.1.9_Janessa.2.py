@@ -55,14 +55,13 @@ trtl.end_fill()
 trtl.update()
 
 #create leaves 
-leave_colors = ["DarkRed","DarkGoldenrod2","DarkOrange4"]
+leave_colors = ["DarkRed","DarkGoldenrod2","DarkOrange"]
 trtl.penup()
 trtl.goto(450,300)
 trtl.pensize(0)
 leave_x = trtl.xcor()
 leave_y = trtl.ycor()
-new_leave_x = leave_x + 50
-new_leave_y = leave_y + 50
+
 
 
 
@@ -74,8 +73,12 @@ for l in leave_colors:
     trtl.begin_fill()
     trtl.circle(50)
     trtl.end_fill()
-    trtl.setx(new_leave_x)
-    trtl.sety(new_leave_y)
+    leave_x += 50
+    leave_y += 0
+    trtl.penup()
+    trtl.goto(leave_x, leave_y)
+    trtl.pendown()
+
 
 
 
