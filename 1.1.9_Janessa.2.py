@@ -6,6 +6,7 @@ trtl.addshape("star",((-10,10),(-2,0),(-10,-10),(0,-2),(10,-10),(2,0),(10,10),(0
 trtl.bgcolor("midnight blue")
 
 #create grass 
+trtl.tracer(0)
 trtl.hideturtle()
 trtl.pensize(300)
 trtl.pencolor("DarkOliveGreen4")
@@ -51,18 +52,30 @@ trtl.right(90)
 trtl.forward(390)
 trtl.fillcolor("orange4")
 trtl.end_fill()
+trtl.update()
 
 #create leaves 
 leave_colors = ["DarkRed","DarkGoldenrod2","DarkOrange4"]
-trtl.begin_fill()
 trtl.penup()
 trtl.goto(450,300)
-trtl.pencolor("DarkRed")
-for leaves in range(3):
-    trtl.fillcolor(leave_colors)
+trtl.pensize(0)
+leave_x = trtl.xcor()
+leave_y = trtl.ycor()
+new_leave_x = leave_x + 50
+new_leave_y = leave_y + 50
+
+
+
+trtl.update()
+
+for l in leave_colors:
+    trtl.fillcolor(l)
     trtl.pendown()
-    trtl.circle(30)
-trtl.end_fill()
+    trtl.begin_fill()
+    trtl.circle(50)
+    trtl.end_fill()
+    trtl.setx(new_leave_x)
+    trtl.sety(new_leave_y)
 
 
 
