@@ -107,7 +107,7 @@ e.pencolor("DarkGoldenrod1")
 e.fillcolor("gold")
 e.begin_fill()
 
-if eye_shape1.lower() == "circle":
+if eye_shape1.lower() == "circle": #added .lower for error handling, can do upper and lower case 
     e.circle(50)
 elif eye_shape1.lower() == "triangle":
     e.setheading(180)
