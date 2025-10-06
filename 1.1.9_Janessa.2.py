@@ -5,13 +5,14 @@ screen.setup(width=1.0, height=1.0) #makes the screen bigger
 trtl.bgcolor("midnight blue") 
 
 #create grass-----------------------------------------------------------------------------------------------------------------------------
-trtl.hideturtle()
-trtl.pensize(300)
-trtl.pencolor("DarkOliveGreen4")
-trtl.penup()
-trtl.goto(-1000,-300)
-trtl.pendown()
-trtl.forward(1700)
+g = trtl.Turtle()
+g.hideturtle()
+g.pensize(300)
+g.pencolor("DarkOliveGreen4")
+g.penup()
+g.goto(-1000,-300)
+g.pendown()
+g.forward(1700)
 
 #create stars and moon ----------------------------------------------------------------------------------------------------------------
 # create moon 
